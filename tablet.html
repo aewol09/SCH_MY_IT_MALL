@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테블릿 - SCH My IT Mall</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="wrapper header-content">
+            <a href="Main_Page.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--primary);"></i>
+                <span>SCH</span> IT Mall
+            </a>
+            <div class="user-menu">
+                <a href="login.html">로그인</a>
+                <a href="register.html">회원가입</a>
+                <a href="Presentation.html">사이트 소개</a>
+                <a href="cart.html" class="cart-icon">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrapper">
+            <a href="Main_Page.html">홈</a>
+            <a href="notebook.html">노트북</a>
+            <a href="smartphone.html">스마트폰</a>
+            <a href="tablet.html" style="color: var(--primary); border-bottom: 2px solid var(--primary);">테블릿</a>
+            <a href="peripheral.html">주변기기</a>
+        </div>
+    </nav>
+
+    <main class="wrapper section">
+        <div class="section-title">
+            <h2>Creative Tablets</h2>
+            <p style="font-size: 0.875rem; color: var(--secondary);">상상을 현실로 만드는 가장 얇은 캔버스</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <i data-lucide="tablet" size="64" stroke-width="1"></i>
+                    <span class="badge">Editor's Pick</span>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Professional</p>
+                    <h3 class="product-name">Tab Pro 12.9</h3>
+                    <p class="product-price">₩1,350,000</p>
+                    <div class="product-footer">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="addToCart('Tab Pro 12.9')">담기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <i data-lucide="tablet-smartphone" size="64" stroke-width="1"></i>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Lightweight</p>
+                    <h3 class="product-name">Tab Air Gen 5</h3>
+                    <p class="product-price">₩890,000</p>
+                    <div class="product-footer">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="addToCart('Tab Air Gen 5')">담기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <i data-lucide="pencil" size="64" stroke-width="1"></i>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Note Taking</p>
+                    <h3 class="product-name">Note Tab E</h3>
+                    <p class="product-price">₩450,000</p>
+                    <div class="product-footer">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="addToCart('Note Tab E')">담기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <i data-lucide="layout" size="64" stroke-width="1"></i>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Entertainment</p>
+                    <h3 class="product-name">Cinema Tab 11</h3>
+                    <p class="product-price">₩590,000</p>
+                    <div class="product-footer">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="addToCart('Cinema Tab 11')">담기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <i data-lucide="toy-brick" size="64" stroke-width="1"></i>
+                </div>
+                <div class="product-info">
+                    <p class="product-category">Kids</p>
+                    <h3 class="product-name">Kids Play Tab</h3>
+                    <p class="product-price">₩290,000</p>
+                    <div class="product-footer">
+                        <button class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;" onclick="addToCart('Kids Play Tab')">담기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer-bottom">
+                <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        lucide.createIcons();
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+    </script>
+</body>
+
+</html>

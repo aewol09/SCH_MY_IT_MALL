@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>장바구니 - SCH My IT Mall</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <header>
+    <header id="main-header">
         <div class="wrapper header-content">
-            <a href="Main_Page.html" class="logo">SCH My IT Mall</a>
+            <a href="Main_Page.html" class="logo">
+                <i data-lucide="cpu" style="color: var(--primary);"></i>
+                <span>SCH</span> IT Mall
+            </a>
             <div class="user-menu">
                 <a href="login.html">로그인</a>
                 <a href="register.html">회원가입</a>
                 <a href="Presentation.html">사이트 소개</a>
+                <a href="cart.html" class="cart-icon">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
             </div>
         </div>
     </header>
@@ -23,67 +31,105 @@
     <nav>
         <div class="wrapper">
             <a href="Main_Page.html">홈</a>
-            <a href="#">노트북</a>
-            <a href="#">스마트폰</a>
-            <a href="cart.html">장바구니</a>
+            <a href="notebook.html">노트북</a>
+            <a href="smartphone.html">스마트폰</a>
+            <a href="tablet.html">테블릿</a>
+            <a href="peripheral.html">주변기기</a>
         </div>
     </nav>
 
-    <div class="wrapper" style="margin-top: 50px;">
-        <h2 style="margin-bottom: 30px;">장바구니</h2>
+    <main class="wrapper" style="margin-top: 3rem; margin-bottom: 4rem;">
+        <h1 style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">Shopping Cart</h1>
 
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th style="width: 100px;">이미지</th>
-                    <th>상품명</th>
-                    <th>수량</th>
-                    <th>금액</th>
-                    <th>삭제</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div
-                            style="background: #eee; width: 60px; height: 60px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                            💻</div>
-                    </td>
-                    <td><strong>최신 노트북</strong></td>
-                    <td>1</td>
-                    <td>₩1,890,000</td>
-                    <td><button
-                            style="padding: 5px 10px; border: 1px solid #ddd; background: none; cursor: pointer;">X</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="cart-list" id="cart-items-container">
+                <!-- JavaScript will populate items here -->
+                <div style="padding: 4rem; text-align: center; color: var(--secondary);">
+                    <i data-lucide="shopping-bag" size="48" style="margin-bottom: 1rem; opacity: 0.5;"></i>
+                    <p>장바구니가 비어있습니다.</p>
+                </div>
+            </div>
 
-        <div style="display: flex; justify-content: flex-end; margin-top: 30px;">
-            <div style="width: 300px; padding: 20px; background: var(--light-color); border-radius: 12px;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                    <span>총 상품 금액</span>
-                    <span>₩1,890,000</span>
+            <div id="cart-summary-container" style="display: none; margin-top: 2rem; padding: 2rem; background: var(--light); border-radius: var(--radius);">
+                <div style="display: flex; justify-content: space-between; font-size: 1.25rem; font-weight: 800; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                    <span>총 결제 예정 금액</span>
+                    <span style="color: var(--primary);" id="total-price">₩0</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                    <span>배송비</span>
-                    <span>₩0</span>
-                </div>
-                <div
-                    style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; border-top: 1px solid #ddd; padding-top: 15px; margin-top: 15px;">
-                    <span>결제 예정 금액</span>
-                    <span style="color: var(--primary-color);">₩1,890,000</span>
-                </div>
-                <button class="btn-submit" style="margin-top: 20px;">주문하기</button>
+                <button class="btn-block" style="margin-top: 2rem; padding: 1.25rem;">주문하기</button>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+    <footer style="margin-top: 4rem; border-top: 1px solid var(--border); padding: 3rem 0; background: #fff;">
+        <div class="wrapper" style="text-align: center;">
+            <a href="Main_Page.html" class="logo" style="justify-content: center; margin-bottom: 1rem;">
+                <i data-lucide="cpu" size="20"></i>
+                <span>SCH</span> IT Mall
+            </a>
+            <p style="font-size: 0.875rem; color: var(--secondary);">&copy; 2026 SCH My IT Mall. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="scripts.js"></script>
+    <script>
+        lucide.createIcons();
+        
+        function renderCart() {
+            const container = document.getElementById('cart-items-container');
+            const summary = document.getElementById('cart-summary-container');
+            const totalPriceEl = document.getElementById('total-price');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div style="padding: 4rem; text-align: center; color: var(--secondary);">
+                        <i data-lucide="shopping-bag" size="48" style="margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <p>장바구니가 비어있습니다.</p>
+                    </div>
+                `;
+                summary.style.display = 'none';
+                lucide.createIcons();
+                return;
+            }
+
+            summary.style.display = 'block';
+            let total = 0;
+
+            container.innerHTML = cart.map((item, index) => {
+                const price = PRODUCT_PRICES[item.name] || 0; 
+                const subtotal = price * item.quantity;
+                total += subtotal;
+                return `
+                    <div class="cart-item" style="display: grid; grid-template-columns: 1fr auto auto; gap: 2rem; padding: 1.5rem; border-bottom: 1px solid var(--border); align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--light); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="package" size="24"></i>
+                            </div>
+                            <div>
+                                <p style="font-weight: 700;">${item.name}</p>
+                                <p style="font-size: 0.75rem; color: var(--secondary);">수량: ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <div style="font-weight: 700; color: var(--primary);">₩${subtotal.toLocaleString()}</div>
+                        <button onclick="removeFromCart(${index})" style="background:none; border:none; color: var(--secondary); cursor:pointer;">
+                            <i data-lucide="trash-2" size="18"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+            
+            totalPriceEl.innerText = `₩${total.toLocaleString()}`;
+            lucide.createIcons();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            updateCartCount();
+        }
+
+        window.addEventListener('DOMContentLoaded', renderCart);
+    </script>
 </body>
 
 </html>
