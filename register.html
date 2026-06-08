@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - SCH My IT Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper header-content">
+            <a href="Main_Page.html" class="logo">SCH My IT Mall</a>
+            <div class="user-menu">
+                <a href="login.html">로그인</a>
+                <a href="register.html">회원가입</a>
+                <a href="Presentation.html">사이트 소개</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="form-container" style="max-width: 550px;">
+            <h2 class="form-title">회원가입</h2>
+            
+            <div class="form-group">
+                <label for="reg-id">아이디* (영문/숫자 4~12자)</label>
+                <input type="text" id="reg-id" placeholder="아이디를 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-pw">비밀번호* (8자 이상)</label>
+                <input type="password" id="reg-pw" placeholder="비밀번호를 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-pw-confirm">비밀번호 확인*</label>
+                <input type="password" id="reg-pw-confirm" placeholder="비밀번호를 다시 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-name">이름*</label>
+                <input type="text" id="reg-name" placeholder="이름을 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-email">이메일*</label>
+                <input type="email" id="reg-email" placeholder="example@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="reg-phone">휴대폰 번호* (숫자만)</label>
+                <input type="text" id="reg-phone" placeholder="01012345678">
+            </div>
+
+            <div style="margin: 30px 0; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+                <label style="display: flex; align-items: center; font-size: 14px; cursor: pointer;">
+                    <input type="checkbox" id="terms-all" style="width: auto; margin-right: 10px;"> 모든 약관 및 필수 입력 사항에 동의합니다.
+                </label>
+            </div>
+
+            <button class="btn-submit" onclick="validateRegister()">가입하기</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

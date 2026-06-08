@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCH My IT Mall - 메인</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper header-content">
+            <a href="Main_Page.html" class="logo">SCH My IT Mall</a>
+            <div class="user-menu">
+                <a href="login.html">로그인</a>
+                <a href="register.html">회원가입</a>
+                <a href="Presentation.html">사이트 소개</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="최신 전자기기를 검색해보세요">
+            <button onclick="handleSearch()">검색</button>
+        </div>
+    </div>
+
+    <nav>
+        <div class="wrapper">
+            <a href="#">노트북</a>
+            <a href="#">스마트폰</a>
+            <a href="#">테블릿</a>
+            <a href="#">주변기기</a>
+            <a href="cart.html">장바구니</a>
+            <a href="#">고객센터</a>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Next Generation IT</h1>
+                <p>가장 앞선 기술을 지금 바로 만나보세요.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="main-content">
+                <h2>추천 상품</h2>
+                <div class="product-grid" style="margin-top: 20px;">
+                    <div class="product-card" onclick="location.href='product_detail.html'">
+                        <div class="product-image">💻</div>
+                        <p class="product-name">최사양 노트북</p>
+                        <p class="product-price">₩1,890,000</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">📱</div>
+                        <p class="product-name">최신 스마트폰</p>
+                        <p class="product-price">₩1,250,000</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">🎧</div>
+                        <p class="product-name">노이즈캔슬링 헤드폰</p>
+                        <p class="product-price">₩350,000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h3>오늘의 특가</h3>
+                <p style="margin-top: 15px; font-weight: 600;">🔥 무선 마우스 30% 할인</p>
+                <p style="color: var(--secondary-color); font-size: 14px;">한정 수량 진행 중</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

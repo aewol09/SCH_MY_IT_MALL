@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 - SCH My IT Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper header-content">
+            <a href="Main_Page.html" class="logo">SCH My IT Mall</a>
+            <div class="user-menu">
+                <a href="login.html">로그인</a>
+                <a href="register.html">회원가입</a>
+                <a href="Presentation.html">사이트 소개</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrapper">
+            <a href="Main_Page.html">홈</a>
+            <a href="#">노트북</a>
+            <a href="#">스마트폰</a>
+            <a href="cart.html">장바구니</a>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <div class="detail-container">
+            <div style="background: #f0f0f0; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 10rem;">💻</div>
+            
+            <div class="detail-info">
+                <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 10px;">PREMIUM LAPTOP</p>
+                <h1>High-End Laptop Pro 16"</h1>
+                <p class="detail-price">₩1,890,000</p>
+                
+                <div class="detail-desc">
+                    <p style="margin-bottom: 20px; color: var(--secondary-color);">최고의 성능을 자랑하는 차세대 노트북입니다. M3 칩셋과 16인치 Liquid Retina XDR 디스플레이로 전문가급 작업 환경을 제공합니다.</p>
+                    <ul style="list-style: none; font-size: 14px;">
+                        <li style="margin-bottom: 10px;">✔️ Apple M3 Pro 칩 (12코어 CPU, 18코어 GPU)</li>
+                        <li style="margin-bottom: 10px;">✔️ 16GB 통합 메모리</li>
+                        <li style="margin-bottom: 10px;">✔️ 512GB SSD 저장 장치</li>
+                        <li style="margin-bottom: 10px;">✔️ 최대 22시간 배터리 사용</li>
+                    </ul>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn-cart" onclick="addToCart('High-End Laptop Pro')">장바구니 담기</button>
+                    <button class="btn-submit" style="flex: 1;">바로 구매하기</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 80px; border-top: 1px solid var(--border-color); padding-top: 40px;">
+            <h3>상세 정보</h3>
+            <p style="margin-top: 20px; color: var(--secondary-color);">본 상품은 공식 수입품이며, 1년의 제한 보증을 제공합니다. 구성품에는 140W USB-C 전원 어댑터와 USB-C-MagSafe 3 케이블이 포함되어 있습니다.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

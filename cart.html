@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - SCH My IT Mall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper header-content">
+            <a href="Main_Page.html" class="logo">SCH My IT Mall</a>
+            <div class="user-menu">
+                <a href="login.html">로그인</a>
+                <a href="register.html">회원가입</a>
+                <a href="Presentation.html">사이트 소개</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrapper">
+            <a href="Main_Page.html">홈</a>
+            <a href="#">노트북</a>
+            <a href="#">스마트폰</a>
+            <a href="cart.html">장바구니</a>
+        </div>
+    </nav>
+
+    <div class="wrapper" style="margin-top: 50px;">
+        <h2 style="margin-bottom: 30px;">장바구니</h2>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th style="width: 100px;">이미지</th>
+                    <th>상품명</th>
+                    <th>수량</th>
+                    <th>금액</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div
+                            style="background: #eee; width: 60px; height: 60px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                            💻</div>
+                    </td>
+                    <td><strong>최신 노트북</strong></td>
+                    <td>1</td>
+                    <td>₩1,890,000</td>
+                    <td><button
+                            style="padding: 5px 10px; border: 1px solid #ddd; background: none; cursor: pointer;">X</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="display: flex; justify-content: flex-end; margin-top: 30px;">
+            <div style="width: 300px; padding: 20px; background: var(--light-color); border-radius: 12px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>총 상품 금액</span>
+                    <span>₩1,890,000</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>배송비</span>
+                    <span>₩0</span>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; border-top: 1px solid #ddd; padding-top: 15px; margin-top: 15px;">
+                    <span>결제 예정 금액</span>
+                    <span style="color: var(--primary-color);">₩1,890,000</span>
+                </div>
+                <button class="btn-submit" style="margin-top: 20px;">주문하기</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SCH My IT Shopping Mall. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
