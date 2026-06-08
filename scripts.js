@@ -1,38 +1,29 @@
-/* scripts.js - Interactive Logic & State Management */
-
-// Global Product Prices
 const PRODUCT_PRICES = {
-    // Notebooks
     'Laptop Pro 16': 2490000,
     'Air Light 13': 1290000,
     'Gaming Beast X': 1850000,
     'Flex Tablet PC': 990000,
     'Code Master 15': 1590000,
-    // Smartphones
     'Galaxy Ultra X': 1450000,
     'Phone Pro 15': 1550000,
     'Lite Phone Gen 3': 650000,
     'Fold Master 5': 2100000,
     'Photo Phone Z': 1100000,
-    // Tablets
     'Tab Pro 12.9': 1350000,
     'Tab Air Gen 5': 890000,
     'Note Tab E': 450000,
     'Cinema Tab 11': 590000,
     'Kids Play Tab': 290000,
-    // Peripherals
     'Mechanical K1 Pro': 159000,
     'Wireless Master 3S': 129000,
     'Stream Cam 4K': 210000,
     'SSD Portable 2TB': 240000,
     'Audio Engine A2+': 350000,
-    // Main Page / Detail Page Defaults
     'Laptop Pro': 1890000,
     'Ultra Gen 5': 1250000,
     'Headset': 350000
 };
 
-// Utility: Toast Notification
 function showToast(message, type = 'success') {
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
@@ -58,7 +49,6 @@ function showToast(message, type = 'success') {
     }, 3000);
 }
 
-// Add CSS for toast animation
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideUp {
@@ -68,7 +58,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Cart State Management
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartCount() {
@@ -91,7 +80,6 @@ function addToCart(productName) {
     showToast(`${productName} 상품이 장바구니에 담겼습니다.`);
 }
 
-// Auth Logic
 const patterns = {
     username: /^[a-zA-Z0-9]{4,12}$/,
     password: /^.{8,}$/,
@@ -176,7 +164,6 @@ function handleSearch() {
     }
 }
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     updateCartCount();
 });

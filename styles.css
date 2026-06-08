@@ -57,7 +57,6 @@ img {
     height: auto;
 }
 
-/* Layout */
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
@@ -68,7 +67,6 @@ img {
     padding: 5rem 0;
 }
 
-/* Header */
 header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
@@ -143,7 +141,6 @@ header .header-content {
     font-weight: 700;
 }
 
-/* Navigation */
 nav {
     background-color: var(--white);
     border-bottom: 1px solid var(--border);
@@ -182,7 +179,6 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Search Bar */
 .search-container {
     padding: 3rem 0;
     background: linear-gradient(to bottom, var(--light), var(--white));
@@ -221,7 +217,6 @@ nav a:hover::after {
     background-color: var(--primary-dark);
 }
 
-/* Hero Section */
 .hero {
     border-radius: var(--radius);
     margin: 2rem 0;
@@ -287,7 +282,6 @@ nav a:hover::after {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Main Content Grid */
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 320px;
@@ -295,7 +289,6 @@ nav a:hover::after {
     margin: 4rem 0;
 }
 
-/* Product Cards */
 .section-title {
     font-size: 1.875rem;
     font-weight: 700;
@@ -383,7 +376,6 @@ nav a:hover::after {
     border-top: 1px solid var(--border);
 }
 
-/* Sidebar */
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -410,7 +402,6 @@ nav a:hover::after {
     border: 1px solid var(--border);
 }
 
-/* Forms */
 .auth-container {
     max-width: 500px;
     margin: 5rem auto;
@@ -465,7 +456,6 @@ nav a:hover::after {
     background-color: var(--primary-dark);
 }
 
-/* Footer */
 footer {
     background-color: var(--dark);
     color: var(--white);
@@ -514,7 +504,6 @@ footer {
     opacity: 0.4;
 }
 
-/* Detail Page */
 .product-detail-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -570,7 +559,6 @@ footer {
     gap: 1.5rem;
 }
 
-/* Cart Page */
 .cart-list {
     background-color: var(--white);
     border-radius: var(--radius);
@@ -612,7 +600,6 @@ footer {
     font-size: 2rem;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
     .main-grid {
         grid-template-columns: 1fr;
