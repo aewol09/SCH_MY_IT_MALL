@@ -111,7 +111,7 @@ function validateLogin() {
 
     showToast('로그인 성공! 메인 페이지로 이동합니다.');
     setTimeout(() => {
-        location.href = './Main_Page.html';
+        location.href = './index.html';
     }, 1500);
     return true;
 }
